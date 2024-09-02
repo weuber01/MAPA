@@ -7,7 +7,7 @@ from crop import recortar2
 
 def APRESENTACAO():
 
-    dirpath=os.getcwd()
+   
 
 
     """ fontes """
@@ -49,13 +49,7 @@ def APRESENTACAO():
     im.save("prov.png")
     recortar2("prov.png")
 
-    """ Limpar diretório"""
-    print(dirpath)
-    for x in os.listdir(dirpath):
-        if x.endswith("*.jpg"):
-            os.remove(x)
-        if x.endswith("*.png"):
-            os.remove(x)
+
             
     
 
