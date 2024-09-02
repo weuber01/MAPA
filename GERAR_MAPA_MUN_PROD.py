@@ -29,8 +29,8 @@ class PLOTTING():
         data["codig"] =pd.to_numeric(data["codig"])
         print(data.head())
         print(data.dtypes)
-        SFILE=".\\malhas\\55mu2500gsd.shp"
-        SFILE_UF=".\\malhas\\BRUFE250GC_SIR.shp"
+        SFILE="\\malhas\\55mu2500gsd.shp"
+        SFILE_UF="\\malhas\\BRUFE250GC_SIR.shp"
         self.sf = shp.Reader(SFILE,encoding="latin1")
         self.sfuf = shp.Reader(SFILE_UF)
         self.comp=len(self.sf.shapes())
