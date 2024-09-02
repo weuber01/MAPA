@@ -19,14 +19,14 @@ def legenda_prod_vertical(lcores,faixa,rot):
         temp=lr.replace(".0","")
         l_raz.append(temp)
 
-    # font = ImageFont.truetype(r".\\fonts\\arial.ttf", size=16)
-    # font2 = ImageFont.truetype(r".\\fonts\\arial.ttf", size=18)
+    font = ImageFont.truetype(r".\\fonts\\arial.ttf", size=16)
+    font2 = ImageFont.truetype(r".\\fonts\\arial.ttf", size=18)
     for y in range(0,len(l_cor)):
         print(y)
         draw.rectangle((20, 50+y*lado, 20+lado,50+lado+y*lado), fill=l_cor[y], outline=(250,250,250),width=1)
         comp=len(l_raz[y])
-        draw.text((63,60+y*lado),l_raz[y], fill="black")
-        draw.text((63+9*comp+40,60+y*lado),l_raz[y+1], fill="black")
+        draw.text((63,60+y*lado),l_raz[y],font=font2,fill="black")
+        draw.text((63+9*comp+40,60+y*lado),l_raz[y+1],font=font2, fill="black")
         draw.line((63+9*comp+10,70+y*lado,63+9*comp+30,70+y*lado),fill="black",width=3)
         if y>0:
             draw.line((63+9*comp+8,70+y*lado-5,63+9*comp+8,70+y*lado+5),fill="black",width=3)
@@ -35,5 +35,5 @@ def legenda_prod_vertical(lcores,faixa,rot):
     texto=rot
     
 
-    draw.text((30,5),texto, fill="black")
+    draw.text((30,5),texto, font=font2,fill="black")
     im.save('leg_temp.jpg', quality=95)   
