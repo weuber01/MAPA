@@ -4,7 +4,7 @@ import re
 from natural_breaks import getJenksBreaks as Jenks
 from variaveis_cor import faixa
 from variaveis_cor import selcor
-from legenda import legenda_prod_vertical as LEG
+from nova_legenda import legenda_prod_vertical as LEG
 from GERAR_MAPA_MUN_PROD import PLOTTING as PLOT
 from MONTAGEM_CAP_PROD import APRESENTACAO as MONTAGEM
 import sys
@@ -128,7 +128,7 @@ if Filename:
             l_cores=selcor(rd1)
             lista_cores=cor(faixa,l_cores)
             legtxt=txt1+"\n"+txt2
-            LEG(lista_cores,lista_jenks,legtxt)
+            LEG(lista_cores,lista_jenks,txt1,txt2)
             PLOT(dfn,lista_jenks,lista_cores,select3,select2)
             MONTAGEM(
                  

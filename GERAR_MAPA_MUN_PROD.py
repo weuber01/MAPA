@@ -128,6 +128,7 @@ class PLOTTING():
                     ax.fill(x_lon,y_lat, color='white',linestyle='None')
                     
             indice_s=indice_s+1
+        ax.text(0.9,0.1,"ASHSGHGSHGHGHD",fontsize=18)
         fig.savefig("mapa_temp.png", dpi=100)
 
     def selecao_fx(self):

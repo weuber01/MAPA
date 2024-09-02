@@ -29,7 +29,7 @@ def APRESENTACAO():
     """ Carregar imagens """
     im=Image.open("fundo.png")
     mun2=Image.open("mapa_temp_r.png")
-    lfig_vertical=Image.open('leg_temp.jpg')
+    lfig_vertical=Image.open('leg_temp.png')
     
     "Desenhar em uma imagem"
     dr = ImageDraw.Draw(im)
